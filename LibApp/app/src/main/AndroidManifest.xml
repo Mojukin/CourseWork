@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LibApp">
-        <activity android:name=".MainActivity">
+        <activity android:name=".RegisterScreen"></activity>
+        <activity android:name=".AuthorizScreen" />
+        <activity android:name=".ProfileScreen" />
+        <activity android:name=".ReadBook" />
+        <activity android:name=".FavoriteBook" />
+        <activity android:name=".MenuScreen" />
+        <activity android:name=".LoadScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
