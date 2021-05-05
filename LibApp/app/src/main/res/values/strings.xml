@@ -9,5 +9,9 @@
     <string name="folder">Каталог</string>
     <string name="my_book">Мои книги</string>
     <string name="profile">Профиль</string>
+    <string name="enter_reg">Войти/Зарегистрироваться</string>
+    <string name="refactor_data">Редактировать данные</string>
+    <string name="str_for_profile">Аноним</string>
+    <string name="str_for_initial">А</string>
 
 </resources>

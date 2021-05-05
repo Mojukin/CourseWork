@@ -10,6 +10,7 @@
     <color name="gray_search">#787878</color>
     <color name="gray_txt">#A7A7A7</color>
     <color name="orange_txt">#EB5000</color>
+    <color name="background_main">#1E1E1E</color>
 
 
 </resources>

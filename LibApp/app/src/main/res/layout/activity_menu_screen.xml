@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_main"
     tools:context=".MenuScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,6 +73,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="ClickHeader"
             android:text="@string/popular"
             android:textColor="@color/gray_txt"
@@ -81,8 +83,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.89"
-            android:focusable="true" />
+            app:layout_constraintVertical_bias="0.89" />
 
         <TextView
             android:id="@+id/textViewNew"
@@ -91,6 +92,7 @@
             android:layout_marginStart="182dp"
             android:layout_marginLeft="182dp"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="ClickHeader"
             android:text="@string/new_products"
             android:textColor="@color/gray_txt"
@@ -100,8 +102,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.89"
-            android:focusable="true" />
+            app:layout_constraintVertical_bias="0.89" />
 
         <TextView
             android:id="@+id/textViewGenres"
@@ -110,6 +111,7 @@
             android:layout_marginStart="314dp"
             android:layout_marginLeft="314dp"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="ClickHeader"
             android:text="@string/genres"
             android:textColor="@color/gray_txt"
@@ -119,8 +121,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.89"
-            android:focusable="true" />
+            app:layout_constraintVertical_bias="0.89" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

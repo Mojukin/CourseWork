@@ -55,4 +55,18 @@ public class ProfileScreen extends AppCompatActivity {
                 break;
         }
     }
+
+    public void  ClickBut (View view){
+        switch (view.getId()){
+
+            case R.id.button_aythoriz_reg:
+                Intent intent = new Intent(this, AuthorizScreen.class );
+                startActivity(intent);
+                break;
+            case R.id.button_refactor_data:
+                Intent intent2 = new Intent(this, RefactorDataUser.class );
+                startActivity(intent2);
+                break;
+        }
+    }
 }

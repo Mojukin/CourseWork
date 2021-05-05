@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_main"
     tools:context=".ProfileScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,6 +61,7 @@
             android:id="@+id/imageViewProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="TODO"
             android:onClick="ClickFooter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +70,6 @@
             app:layout_constraintTop_toTopOf="@+id/imageViewFooterBlock"
             app:layout_constraintVertical_bias="0.41000003"
             app:srcCompat="@drawable/icon_profile"
-            android:contentDescription="TODO"
             app:tint="@color/orange_txt" />
 
         <ImageView
@@ -140,4 +142,101 @@
             app:layout_constraintVertical_bias="0.88" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_aythoriz_reg"
+        android:layout_width="381dp"
+        android:layout_height="54dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="ClickBut"
+        android:text="@string/enter_reg"
+        app:backgroundTint="@color/orange_txt"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_refactor_data"
+        android:layout_width="381dp"
+        android:layout_height="54dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="ClickBut"
+        android:text="@string/refactor_data"
+        app:backgroundTint="@color/orange_txt"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001">
+
+        <ImageView
+            android:id="@+id/imageView_header_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/head_for_profile" />
+
+        <TextView
+            android:id="@+id/textView_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginLeft="105dp"
+            android:text="@string/str_for_profile"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView_header_block" />
+
+        <ImageView
+            android:id="@+id/imageView_profile_user_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_profile_cirlce" />
+
+        <TextView
+            android:id="@+id/textView_initial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_for_initial"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_profile_user_circle"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_profile_user_circle"
+            app:layout_constraintStart_toStartOf="@+id/imageView_profile_user_circle"
+            app:layout_constraintTop_toTopOf="@+id/imageView_profile_user_circle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

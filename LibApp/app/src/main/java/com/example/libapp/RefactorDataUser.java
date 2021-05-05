@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class RegisterScreen extends AppCompatActivity {
+public class RefactorDataUser extends AppCompatActivity {
 
     TextView textViewProfile;
     TextView textViewFolder;
@@ -18,8 +18,9 @@ public class RegisterScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_screen);
+        setContentView(R.layout.activity_refactor_data_user);
     }
+
     @SuppressLint("NonConstantResourceId")
     public void ClickFooter (View view){
 
@@ -49,6 +50,7 @@ public class RegisterScreen extends AppCompatActivity {
             case R.id.imageViewProfile:
                 Intent intent3 = new Intent(this, ProfileScreen.class );
                 startActivity(intent3);
+
                 break;
 
             default:

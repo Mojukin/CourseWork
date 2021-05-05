@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_main"
     tools:context=".FavoriteBook">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +32,7 @@
             android:id="@+id/imageViewMyBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="TODO"
             android:onClick="ClickFooter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +41,6 @@
             app:layout_constraintTop_toTopOf="@+id/imageViewFooterBlock"
             app:layout_constraintVertical_bias="0.41000003"
             app:srcCompat="@drawable/icon_book_footer"
-            android:contentDescription="TODO"
             app:tint="@color/orange_txt" />
 
         <ImageView
