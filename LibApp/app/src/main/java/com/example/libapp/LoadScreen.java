@@ -12,7 +12,6 @@ public class LoadScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.load_screen);
-//        context.getDatabasePath()
     }
 
     public void open(View view) {
