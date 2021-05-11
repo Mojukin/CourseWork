@@ -75,7 +75,7 @@ public class ProfileScreen extends AppCompatActivity {
 
                 break;
 
-//            Нажатие на кнопку дедактирование данных
+//            Нажатие на кнопку редактирование данных
             case R.id.button_refactor_data:
                 Intent intent2 = new Intent(this, RefactorDataUser.class );
                 startActivity(intent2);

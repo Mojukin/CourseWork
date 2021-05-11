@@ -8,7 +8,7 @@
     tools:context=".ProfileScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayout_foter"
         android:layout_width="match_parent"
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -179,7 +179,7 @@
         app:layout_constraintVertical_bias="0.593" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/constraintLayout_head"
         android:layout_width="match_parent"
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"

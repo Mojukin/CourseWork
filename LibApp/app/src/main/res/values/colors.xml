@@ -12,5 +12,7 @@
     <color name="gray_txt">#A7A7A7</color>
     <color name="orange_txt">#EB5000</color>
     <color name="background_main">#1E1E1E</color>
+    <color name="background_reg">#484848</color>
+    <color name="background_button_reg">#918F8F</color>
 
 </resources>

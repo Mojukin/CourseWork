@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class AuthorizScreen extends AppCompatActivity {
@@ -15,6 +16,8 @@ public class AuthorizScreen extends AppCompatActivity {
     TextView textViewFolder;
     TextView textViewSearch;
     TextView textViewMyBook;
+    EditText editTextEmail;
+    EditText editTextPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +63,32 @@ public class AuthorizScreen extends AppCompatActivity {
 
             default:
                 break;
+        }
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    public void ClickBut (View view){
+
+//        Нахождение EditText по id
+        editTextEmail= (EditText) findViewById(R.id.editText_email);
+        editTextPassword = (EditText) findViewById(R.id.editText_old_pass);
+
+//        switch/case для нажатия на кнопку
+        switch (view.getId()) {
+
+//            Нажите на кнопку войти
+            case R.id.button_enter:
+
+                return;
+
+//            Нажатие на кнопку зарегистрироваться
+            case R.id.button_reg:
+                Intent intent = new Intent(this, RegisterScreen.class);
+                startActivity(intent);
+                return;
+
+            default:
+                return;
         }
     }
 }

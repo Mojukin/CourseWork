@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">LibApp</string>
+    <string name="app_name">LibOnLib</string>
     <string name="load">Загрузка…</string>
     <string name="search">Поиск</string>
     <string name="popular">Популярное</string>
@@ -14,5 +14,21 @@
     <string name="str_for_profile">Аноним</string>
     <string name="str_for_initial">А</string>
     <string name="todo">TODO</string>
+    <string name="enter_acc">Войти</string>
+    <string name="reg_acc">Зарегистрироваться</string>
+    <string name="email">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="return_pass">Повторите пароль</string>
+    <string name="old_pass">Старый пароль</string>
+    <string name="new_pass">Новый пароль</string>
+    <string name="inicial_font">Aa</string>
+    <string name="size_font">14</string>
+    <string name="size_font_pt">pt</string>
+    <string name="plus_size_font">+ A</string>
+    <string name="font_txt">Размер шрифта</string>
+    <string name="minus_size_font">- A</string>
+
 
 </resources>

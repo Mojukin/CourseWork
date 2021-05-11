@@ -38,20 +38,22 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/search"
             android:ems="10"
-            android:gravity="center"
+            android:gravity="start"
             android:hint="@string/search"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:paddingLeft="60dp"
+            android:paddingTop="5dp"
             android:selectAllOnFocus="true"
             android:shadowColor="#787878"
-            android:textColor="#787878"
-            android:textColorHint="#787878"
+            android:textColor="@color/gray_search"
+            android:textColorHint="@color/gray_search"
             android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageViewHeaderBlock"
+
             app:layout_constraintEnd_toEndOf="@+id/imageViewHeaderBlock"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toTopOf="@+id/imageViewHeaderBlock"
             app:layout_constraintVertical_bias="0.0" />
 

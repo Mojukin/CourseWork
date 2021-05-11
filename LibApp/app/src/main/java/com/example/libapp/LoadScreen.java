@@ -16,7 +16,7 @@ public class LoadScreen extends AppCompatActivity {
 
     public void open(View view) {
 
-        Intent intent = new Intent(this, MenuScreen.class);
+        Intent intent = new Intent(this, ReadBook.class);
         startActivity(intent);
 
     }
