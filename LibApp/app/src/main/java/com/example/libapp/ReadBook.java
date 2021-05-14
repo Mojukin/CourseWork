@@ -7,11 +7,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,8 +19,8 @@ public class ReadBook extends AppCompatActivity {
     String[] font = { "sans-serif", "monospace"};
 
 //    Блок переменных ImageView
-    ImageView imageViewSettings;
-    ImageView imageViewBack;
+    ImageButton imageButtonSettings;
+    ImageButton imageButtonBack;
 
 //    Блок переменных EditText
     EditText editTextSearch;
@@ -43,7 +41,7 @@ public class ReadBook extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         // Создаем адаптер ArrayAdapter с помощью массива строк и стандартной разметки элемета spinner
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_adapter, font);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_adapter_for_droplist, font);
         // Определяем разметку для использования при выборе элемента
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Применяем адаптер к элементу spinner
@@ -70,8 +68,8 @@ public class ReadBook extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     public void click (View view){
 
-        imageViewSettings = (ImageView) findViewById(R.id.imageView_settings);
-        imageViewBack = (ImageView) findViewById(R.id.imageView_back);
+        imageButtonSettings = (ImageButton) findViewById(R.id.imageButton_settings);
+        imageButtonBack = (ImageButton) findViewById(R.id.imageButton_back);
         editTextSearch = (EditText) findViewById(R.id.editText_search);
         textViewSizeText = (TextView) findViewById(R.id.textView_size_txt);
 
@@ -79,13 +77,13 @@ public class ReadBook extends AppCompatActivity {
         switch (view.getId()){
 
 //            Нажатие на иконку назад
-            case R.id.imageView_back:
+            case R.id.imageButton_back:
                 Intent intent = new Intent(this, MenuScreen.class );
                 startActivity(intent);
                 break;
 
 //            Нажатие на иконку настройки
-            case R.id.imageView_settings:
+            case R.id.imageButton_settings:
                 constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout_settings);
                 if(!settings_active){
                     constraintLayout.animate().setDuration(600).translationY(-760).start();

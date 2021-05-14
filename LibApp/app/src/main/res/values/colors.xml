@@ -14,5 +14,7 @@
     <color name="background_main">#1E1E1E</color>
     <color name="background_reg">#484848</color>
     <color name="background_button_reg">#918F8F</color>
+    <color name="bg_item">#3B3B3B</color>
+    <color name="bg_item_stroke">#707070</color>
 
 </resources>

@@ -57,10 +57,11 @@
             app:srcCompat="@drawable/icon_search"
             app:tint="@color/gray_search" />
 
-        <ImageView
-            android:id="@+id/imageView_back"
+        <ImageButton
+            android:id="@+id/imageButton_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:onClick="click"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,11 +70,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon_back" />
 
-        <ImageView
-            android:id="@+id/imageView_settings"
+        <ImageButton
+            android:id="@+id/imageButton_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click"
+            android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.97"
