@@ -87,10 +87,12 @@ public class ReadBook extends AppCompatActivity {
                 constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout_settings);
                 if(!settings_active){
                     constraintLayout.animate().setDuration(600).translationY(-760).start();
+                    imageButtonSettings.animate().setDuration(600).rotationBy(120).start();
                     settings_active = true;
                 }
                 else {
                     constraintLayout.animate().setDuration(600).translationY(760).start();
+                    imageButtonSettings.animate().setDuration(600).rotationBy(-120).start();
                     settings_active = false;
                 }
                 break;
