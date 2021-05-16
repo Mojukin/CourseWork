@@ -170,12 +170,6 @@ public class AuthorizScreen extends AppCompatActivity {
                         textViewUser.setText(String.format("%s %s", currentName, currentSurname));
                         Toast.makeText(getApplicationContext(), "Авторизация успешна!", Toast.LENGTH_LONG).show();
 
-                        try {
-                            Thread.sleep(500);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
                         Intent intent = new Intent(this, ProfileScreen.class);
                         startActivity(intent);
                     }
