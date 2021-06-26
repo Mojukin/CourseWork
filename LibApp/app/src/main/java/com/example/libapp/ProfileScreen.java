@@ -9,18 +9,36 @@ import android.service.voice.VoiceInteractionSession;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class ProfileScreen extends AppCompatActivity {
 //    Блок переменных TextView
     TextView textViewProfile;
     TextView textViewFolder;
     TextView textViewSearch;
     TextView textViewMyBook;
+    TextView textViewUser;
+    TextView textViewInitial;
 
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_screen);
-    }
+        textViewUser = (TextView) (findViewById(R.id.textView_user));
+        textViewInitial = (TextView) findViewById(R.id.textView_initial);
+
+        if(DataUser._idUser != 0) {
+            char[] chArray = DataUser.nameUser.toCharArray();
+
+            String s = String.valueOf(chArray[0]);
+
+                textViewInitial.setText(s);
+                textViewUser.setText(DataUser.nameUser + " " + DataUser.surnameUser);
+            }
+        }
+
     @SuppressLint("NonConstantResourceId")
     public void ClickFooter (View view){
 

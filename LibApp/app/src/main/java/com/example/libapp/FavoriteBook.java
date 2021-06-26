@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class FavoriteBook extends AppCompatActivity {
 
 //    Блок переменных TextView
@@ -15,13 +17,13 @@ public class FavoriteBook extends AppCompatActivity {
     TextView textViewFolder;
     TextView textViewSearch;
     TextView textViewMyBook;
+    List<LikeBookByUser> lbbu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite_book);
     }
-
 
     @SuppressLint("NonConstantResourceId")
     public void ClickFooter (View view){

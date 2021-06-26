@@ -12,6 +12,7 @@
     <string name="enter_reg">Войти/Зарегистрироваться</string>
     <string name="refactor_data">Редактировать данные</string>
     <string name="str_for_profile">Аноним</string>
+    <string name="str_for_dateofbirth">Дата рождения (yyyy-mm-dd)</string>
     <string name="str_for_initial">А</string>
     <string name="todo">TODO</string>
     <string name="enter_acc">Войти</string>

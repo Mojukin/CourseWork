@@ -25,7 +25,7 @@ public class LoadScreen extends AppCompatActivity {
         Runnable r = new Runnable() {
             @Override
             public void run(){
-                Intent intent = new Intent(LoadScreen.this, AuthorizScreen.class);
+                Intent intent = new Intent(LoadScreen.this, ReadBook.class);
                 startActivity(intent);
             }
         };

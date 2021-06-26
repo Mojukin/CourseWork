@@ -6,6 +6,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -14,8 +16,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class ReadBook extends AppCompatActivity {
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
+public class ReadBook extends AppCompatActivity {
+    final String LOG_TAG = "myLogs";
+    final String DIR_SD = "MyFiles";
     String[] font = { "sans-serif", "monospace"};
 
 //    Блок переменных ImageView
@@ -61,9 +70,33 @@ public class ReadBook extends AppCompatActivity {
             }
         };
         spinner.setOnItemSelectedListener(itemSelectedListener);
+
+
+
+//        // проверяем доступность SD
+//        if (!Environment.getExternalStorageState().equals(
+//                Environment.MEDIA_MOUNTED)) {
+//            Log.d(LOG_TAG, "SD-карта не доступна: " + Environment.getExternalStorageState());
+//            return;
+//        }
+//        StringBuilder text = new StringBuilder();
+//        try {
+//            // открываем поток для чтения
+//            BufferedReader br = new BufferedReader(new FileReader(DataBook.nameBook));
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                text.append(line);
+//                text.append('\n');
+//            }
+//            br.close() ;
+//        }catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        TextView tv = (TextView)findViewById(R.id.textView2);
+//        tv.setText(text.toString()); ////Set the text to text view.
+
     }
-
-
 
     @SuppressLint("NonConstantResourceId")
     public void click (View view){
@@ -86,12 +119,12 @@ public class ReadBook extends AppCompatActivity {
             case R.id.imageButton_settings:
                 constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout_settings);
                 if(!settings_active){
-                    constraintLayout.animate().setDuration(600).translationY(-760).start();
+                    constraintLayout.animate().setDuration(600).translationY(-560).start();
                     imageButtonSettings.animate().setDuration(600).rotationBy(120).start();
                     settings_active = true;
                 }
                 else {
-                    constraintLayout.animate().setDuration(600).translationY(760).start();
+                    constraintLayout.animate().setDuration(600).translationY(560).start();
                     imageButtonSettings.animate().setDuration(600).rotationBy(-120).start();
                     settings_active = false;
                 }

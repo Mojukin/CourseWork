@@ -66,7 +66,7 @@
             app:layout_constraintVertical_bias="0.16000003" />
 
         <EditText
-            android:id="@+id/editText_pass"
+            android:id="@+id/editText_pass2"
             android:layout_width="344dp"
             android:layout_height="68dp"
             android:autofillHints=""

@@ -7,17 +7,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class AuthorizScreen extends AppCompatActivity {
 
@@ -39,9 +35,8 @@ public class AuthorizScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authoriz_screen);
 
-
-
     }
+
     @SuppressLint("NonConstantResourceId")
     public void ClickFooter (View view){
 
@@ -89,7 +84,7 @@ public class AuthorizScreen extends AppCompatActivity {
 
 //        Нахождение EditText по id
         editTextEmail= (EditText) findViewById(R.id.editText_email);
-        editTextPassword = (EditText) findViewById(R.id.editText_pass);
+        editTextPassword = (EditText) findViewById(R.id.editText_pass2);
         textViewUser = (TextView) findViewById(R.id.textView_user);
 
 //        Обязательный кусок кода из инета
@@ -156,25 +151,22 @@ public class AuthorizScreen extends AppCompatActivity {
 //                    Проверяем на сходство введенных данных и данных из базы
                     if(email.equals(currentEmail) && password.equals(currentPassword)){
 
-//                    Создаем экземпляр класс DataUser
-                        DataUser dataUser = new DataUser();
-
 //                    Помещаем данные в экземпляр класса
-                        dataUser.set_idUser(id);
-                        dataUser.setNameUser(currentName);
-                        dataUser.setSurnameUser(currentSurname);
-                        dataUser.setEmailUser(currentEmail);
-                        dataUser.setDate_of_birthUser(currentDateOfBirth);
-                        dataUser.setPasswordUser(currentPassword);
+                        DataUser._idUser = id;
+                        DataUser.nameUser = currentName;
+                        DataUser.surnameUser = currentSurname;
+                        DataUser.emailUser = currentEmail;
+                        DataUser.date_of_birthUser = currentDateOfBirth;
+                        DataUser.passwordUser = currentPassword;
 
-                        textViewUser.setText(String.format("%s %s", currentName, currentSurname));
                         Toast.makeText(getApplicationContext(), "Авторизация успешна!", Toast.LENGTH_LONG).show();
 
                         Intent intent = new Intent(this, ProfileScreen.class);
                         startActivity(intent);
+
                     }
                     else{
-                        Toast.makeText(getApplicationContext(), "Данного пользователя не существует!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Неверно введен логин или пароль!", Toast.LENGTH_LONG).show();
                     }
 
                 }
