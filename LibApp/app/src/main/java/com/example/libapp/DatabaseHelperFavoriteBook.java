@@ -20,7 +20,7 @@ public class DatabaseHelperFavoriteBook extends SQLiteOpenHelper {
     public static final String ID_USER = "_iduser";
     public static final String ID_BOOK = "_idbook";
 
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;

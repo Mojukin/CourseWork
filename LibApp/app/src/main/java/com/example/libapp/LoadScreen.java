@@ -13,8 +13,6 @@ import android.widget.TextView;
 public class LoadScreen extends AppCompatActivity {
     ImageView imageViewLoad;
 
-    TextView textViewLoad;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +23,7 @@ public class LoadScreen extends AppCompatActivity {
         Runnable r = new Runnable() {
             @Override
             public void run(){
-                Intent intent = new Intent(LoadScreen.this, ReadBook.class);
+                Intent intent = new Intent(LoadScreen.this, MenuScreen.class);
                 startActivity(intent);
             }
         };
@@ -33,9 +31,4 @@ public class LoadScreen extends AppCompatActivity {
         h.postDelayed(r, 3000);
     }
 
-    public void open(View view) {
-
-        Intent intent = new Intent(this, ReadBook.class);
-        startActivity(intent);
-    }
 }

@@ -36,7 +36,6 @@ public class StateAdapter  extends RecyclerView.Adapter<StateAdapter.RecyclerVie
             authorBook = itemView.findViewById(R.id.authorBookTextView);
             imageView = itemView.findViewById(R.id.bookImageView);
             cardView = itemView.findViewById(R.id.cardViewBook);
-           // orderDateTime = itemView.findViewById(R.id.orderDateTime);
         }
     }
 
@@ -44,6 +43,7 @@ public class StateAdapter  extends RecyclerView.Adapter<StateAdapter.RecyclerVie
         this.arrayList = arrayList;
         this.context = context;
     }
+
 
     @NonNull
     @Override
@@ -70,7 +70,7 @@ public class StateAdapter  extends RecyclerView.Adapter<StateAdapter.RecyclerVie
                 DataBook.name = book.getName();
                 DataBook.oathimagebook = book.getOathimagebook();
                 DataBook.pathontext = book.getPathontext();
-
+                context.startActivity(new Intent(context, ReadBook.class));
             }
         });
         // тут присваиваешь текст вьюхи из массива
